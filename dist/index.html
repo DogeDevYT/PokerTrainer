@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Play Texas Hold’em against bots and practice preflop decisions.">
+<title>PokerLab — Poker Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="engine.js" defer></script><script src="equity.js" defer></script><script src="polarity.js" defer></script><script src="ev.js" defer></script><script src="tutorials.js" defer></script><script src="play-metrics.js" defer></script><script src="hand-drill.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="header"><div class="header-inner">
+<a href="#play" class="brand"><span class="brand-mark">♠</span>Poker<span>Lab</span></a>
+<nav aria-label="Training modes"><a href="#play" data-tab="play">Play vs Bots</a><a href="#drill" data-tab="drill">Preflop Drill</a><a href="#range" data-tab="range">Range Trainer</a><a href="#ev" data-tab="ev">EV Trainer</a><a href="#hands" data-tab="hands">Hand ID</a></nav>
+<button class="profile" id="progress" aria-label="Training progress">PL</button>
+</div></header>
+<main id="main"></main><div class="visually-hidden" id="drill-announcement" role="status"></div>
+<dialog id="progress-dialog"><form method="dialog"><button class="close" aria-label="Close">×</button></form><h2>Training progress</h2><div id="progress-content"></div></dialog>
+<footer><span>♠ &nbsp; PokerLab</span><span>Texas Hold’em practice · Play money</span></footer>
+</body></html>
+
+
+
+
+
+
+
