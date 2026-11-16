@@ -1,22 +1,40 @@
 # PokerLab
 
-PokerLab is a browser-based, play-money Texas Hold’em trainer. Open `dist/index.html` in a browser to start. No installation or build step is required. Each training mode has an expandable tutorial with a worked example and an explanation of its feedback.
+A play-money Texas Hold’em trainer for six-max cash games. Play full hands against bots, then practice individual skills with worked examples and immediate feedback.
 
-- **Play vs Bots** deals six-max no-limit hands against five computer opponents. Blinds are 0.5/1 BB, the dealer button rotates, and you can choose a single hand or an unlimited session. Stacks start at 100 BB and carry forward within a session. Busted seats rebuy before the next hand. The score tracks actual and all-in-adjusted results. Infinite sessions show preflop chart alignment, observed action frequencies, and modeled heads-up river call and bet EV with sample counts. Tag first bets on heads-up rivers to compare your value and bluff mix against sizing-based benchmarks.
-- **Preflop Drill** quizzes first-in decisions from UTG through SB and big-blind defense against a 2.5 BB button open.
-- **Range Trainer** shows the 169 starting-hand classes. Open the range tutorial, inspect heuristic action mixes and combo-weighted totals, highlight hands with an action-frequency cutoff, or recall the hands where an action is most frequent. The BB chart includes defense against a BTN open and checking or raising against an SB limp.
-- **EV Trainer** quizzes river calls and pure bluffs. It shows EV in big blinds, the break-even probability, and how changing equity or fold rate affects the decision. Showdown Equity mode asks for an estimate on the flop or turn against a known hand and reveals the exact runout counts, equity, and call EV. River Polarity mode quizzes the bluff share for a given pot and bet size.
-- **Hand ID** times recognition of your best five-card hand or the strongest hand possible using any two unseen hole cards.
-- The **PL** button opens progress. Results are stored in the browser where local storage is available.
+![PokerLab six-max practice table with five bot opponents, betting controls, and session metrics](docs/screenshots/play.png)
 
-The preflop decision drill uses approximate single-action charts. The charts and bots are heuristic and do not use a solver.
+## Quick start
 
+Open `dist/index.html` from a local checkout in your browser. Select a mode from the top navigation. PokerLab runs without an install or a build step.
 
+## Practice modes
 
+| Mode | What you practice |
+| --- | --- |
+| **Play vs Bots** | Play a single hand or an unlimited session. In unlimited sessions, stacks carry forward and busted players rebuy for 100 BB. Review actual gain or loss, all-in-adjusted EV, preflop chart alignment, and estimated river EV. |
+| **Preflop Drill** | Decide whether to open, fold, call, or 3-bet based on your position and the action ahead of you. |
+| **Range Trainer** | Explore all 169 starting-hand classes, inspect mixed-action frequencies, filter by a frequency cutoff, and rebuild a range from memory. |
+| **EV Trainer** | Find break-even points for calls and bluffs, estimate showdown equity against a known hand, and calculate the bluff share for a polarized river bet. |
+| **Hand ID** | Identify your best five-card hand or the strongest hand possible from the board. Track accuracy and average time on correct answers. |
 
+## Trainer previews
 
+Select a screenshot to view it at full size.
 
+| Preflop Drill | Range Trainer |
+| --- | --- |
+| [![Preflop drill showing ace-five suited in the big blind facing a button open](docs/screenshots/preflop.png)](docs/screenshots/preflop.png) | [![Starting-hand grid highlighting hands that call at least 40 percent of the time](docs/screenshots/range.png)](docs/screenshots/range.png) |
+| Choose an action from your cards, position, and the bet you face. | See which hands meet a cutoff and inspect the action mix for any cell. |
 
+| EV Trainer | Hand ID |
+| --- | --- |
+| [![Showdown equity drill with hole cards, a turn board, and the result of an equity estimate](docs/screenshots/equity.png)](docs/screenshots/equity.png) | [![Timed board-reading drill asking for the strongest possible hand on a three-heart flop](docs/screenshots/hands.png)](docs/screenshots/hands.png) |
+| See how exact showdown equity compares with the break-even point for a call. | Read the board and identify the strongest hand that two unseen cards could make. |
 
+## Tutorials and progress
 
+Every mode includes an expandable tutorial. Use the **PL** button to view saved training progress in your browser.
+
+The bots use heuristic strategies. Preflop frequencies and modeled river EV are practice estimates. The showdown equity drill enumerates every possible runout for the displayed matchup.
 
