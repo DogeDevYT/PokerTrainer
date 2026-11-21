@@ -38,3 +38,13 @@ Every mode includes an expandable tutorial. Use the **PL** button to view saved 
 
 The bots use heuristic strategies. Preflop frequencies and modeled river EV are practice estimates. The showdown equity drill enumerates every possible runout for the displayed matchup.
 
+
+## Deployment
+
+GitHub Actions publishes the contents of `dist/` to GitHub Pages.
+
+In the repository’s **Settings → Pages**, select **GitHub Actions** under **Build and deployment → Source**. Push this workflow to `main`, or run **Deploy PokerLab** from the **Actions** tab. Future changes to `dist/` on `main` deploy automatically.
+
+The deployment URL appears in the workflow’s `github-pages` environment after a successful run. The expected project address is [dogedevyt.github.io/PokerTrainer](https://dogedevyt.github.io/PokerTrainer/).
+
+Progress is stored in each browser. Your local-file progress and the hosted site use separate browser storage.
